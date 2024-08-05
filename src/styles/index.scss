@@ -1,7 +1,77 @@
 .links {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
   z-index: 100;
   font-size: 1.4rem;
+
+  a {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.header {
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 100;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.frame {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  border: solid 2px #fff;
+  border-radius: 1rem;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+section {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 275px;
+  font-size: 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 1000px;
+  background-size: 120%;
+  background-image: url('/me.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    border: solid 2px #000;
+    border-radius: 1000px;
+    opacity: 0.5;
+  }
 }
