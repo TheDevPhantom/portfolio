@@ -15,6 +15,14 @@
       transform: scale(1.5);
     }
   }
+
+  @media (max-width: 768px) {
+    top: unset;
+    bottom: 2rem;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .header {
@@ -27,6 +35,11 @@
   z-index: 100;
   font-size: 1.4rem;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    left: 3rem;
+  }
 }
 
 .frame {
